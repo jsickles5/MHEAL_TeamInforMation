@@ -2,7 +2,7 @@
 // in a CSV file
 
 // (c) Maria Roma 2016
-
+// this isn't a real copyright and everyone knows it
 #include <iostream> 
 #include <fstream>
 #include <vector>
