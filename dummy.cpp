@@ -23,13 +23,13 @@ int main() {
 	name.erase(x,1);
 	y = name.find("*");
 
-	firstName = name.substr((x+1), (y-x));
+	string firstName = name.substr((x+1), (y-x));
 
 	name.erase(y,1);
 
 	z = name.find("x");
 
-	lasName = name.substr((y+1), (z-y));
+	string lasName = name.substr((y+1), (z-y));
 
 	ofstream database;
 	database.open("names.csv"); 
@@ -37,10 +37,10 @@ int main() {
 	database << name << endl;
 
 	return 0; }
-
+/*
 <<<<<<< HEAD
 	// Maria wants to show you what a comment is. Again. And here's another.
 =======
 	// Maria wants to show you what a comment is. Again. This is master.
 >>>>>>> master
-	
+*/
