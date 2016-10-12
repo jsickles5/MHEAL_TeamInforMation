@@ -8,31 +8,21 @@
 
 #include "Treatment.hpp"
 
-Treatment::Treatment(int rep_in, string name_in){
+Treatment::Treatment(int rep_in, string name_in) {
 
-    name = name_in;
-    
-    if (name == "antibiotics" )
-    {
-        representation = 1;
-    }
-    if (name == "iv")
-    {
-        representation = 2;
-    }
-    if (name == "feeding tube")
-    {
-        representation = 3;
-    }
-    
+        name = name_in;
+
+        if (name == "antibiotics") {
+                representation = 1;
+        }
+        if (name == "iv") {
+                representation = 2;
+        }
+        if (name == "feeding tube") {
+                representation = 3;
+        }
 }
 
-int Treatment::getRepresentation()
-{
-    return representation;
-}
+int Treatment::getRepresentation() { return representation; }
 
-string Treatment::getName()
-{
-    return name;
-}
+string Treatment::getName() { return name; }

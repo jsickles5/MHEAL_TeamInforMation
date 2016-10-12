@@ -3,40 +3,40 @@
 
 // (c) Maria Roma 2016
 
-#include <iostream> 
-#include <fstream>
-#include <vector>
-#include <string> 
-#include <cstdlib>
 #include "Patient.hpp"
-using namespace std; 
+#include <cstdlib>
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
 
 int main() {
 
-	string name;
-	cout << "Enter *firstname*lastname: "; 
-	cin >> name;
+        string name;
+        cout << "Enter *firstname*lastname: ";
+        cin >> name;
 
-	int x, y, z;
+        int x, y, z;
 
-	x = name.find("*");
-	name.erase(x,1);
-	y = name.find("*");
+        x = name.find("*");
+        name.erase(x, 1);
+        y = name.find("*");
 
-	firstName = name.substr((x+1), (y-x));
+        firstName = name.substr((x + 1), (y - x));
 
-	name.erase(y,1);
+        name.erase(y, 1);
 
-	z = name.find("x");
+        z = name.find("x");
 
-	lasName = name.substr((y+1), (z-y));
+        lasName = name.substr((y + 1), (z - y));
 
-	ofstream database;
-	database.open("names.csv"); 
+        ofstream database;
+        database.open("names.csv");
 
-	database << name << endl;
+        database << name << endl;
 
-	return 0; }
+        return 0;
+}
 
-	// Maria wants to show you what a comment is. Again. This is master.
-	
+// Maria wants to show you what a comment is. Again. This is master.

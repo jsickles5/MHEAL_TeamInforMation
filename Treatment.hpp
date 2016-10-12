@@ -15,18 +15,13 @@ using namespace std;
 
 #endif /* Treatment_hpp */
 
-class Treatment
-{
-public:
-    Treatment(int rep_in, string name_in);
-    int getRepresentation();
-    string getName();
-    
-    
+class Treatment {
+      public:
+        Treatment(int rep_in, string name_in);
+        int getRepresentation();
+        string getName();
 
-    
-private:
-    int representation;
-    string name;
-    
+      private:
+        int representation;
+        string name;
 };

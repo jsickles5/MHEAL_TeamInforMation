@@ -9,26 +9,21 @@
 #ifndef Request_hpp
 #define Request_hpp
 
+#include <iostream>
 #include <stdio.h>
 #include <vector>
-#include <iostream>
 
 #endif /* Request_hpp */
 #include <string>
 using namespace std;
 using std::vector;
 
+class Request {
+      public:
+        Request(string name, string town);
+        void readRequest(ifstream ins);
+        void writeRequest(ofstream outs);
 
-class Request
-{
-public:
-    Request(string name, string town);
-    void readRequest(ifstream ins);
-    void writeRequest(ofstream outs);
-    
-    
-    
-private:
-    //vector containing patients?
-    
+      private:
+        // vector containing patients?
 };
