@@ -11,30 +11,23 @@
 #include <vector>
 using namespace std;
 
-int main() {
+int main(int argc, char *argv[]) {
 
-        string name;
-        cout << "Enter *firstname*lastname: ";
-        cin >> name;
+        string name, lastName, firstName;
+        int x;
 
-        int x, y, z;
+        // This will read the first argument to the executable
+        name = argv[1];
 
-        x = name.find("*");
-        name.erase(x, 1);
-        y = name.find("*");
+        x = name.find("*", 1);
 
-        firstName = name.substr((x + 1), (y - x));
-
-        name.erase(y, 1);
-
-        z = name.find("x");
-
-        lasName = name.substr((y + 1), (z - y));
+        firstName = name.substr(1, x - 1);
+        lastName = name.substr(x + 1);
 
         ofstream database;
         database.open("names.csv");
 
-        database << name << endl;
+        database << firstName << "," << lastName << endl;
 
         return 0;
 }
