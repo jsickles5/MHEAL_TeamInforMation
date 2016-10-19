@@ -4,30 +4,22 @@
 // (c) Maria Roma 2016
 
 #include "Patient.hpp"
-#include <cstdlib>
+#include <algorithm>
 #include <fstream>
-#include <iostream>
 #include <string>
-#include <vector>
 using namespace std;
 
 int main(int argc, char *argv[]) {
 
-        string name, lastName, firstName;
-        int x;
+        // Get the first argument to the executable, remove the first asterisk and replace the rest with commas
+        string input = argv[1];
+        input = input.substr(1);
+        replace(input.begin(), input.end(), '*', ',');
 
-        // This will read the first argument to the executable
-        name = argv[1];
-
-        x = name.find("*", 1);
-
-        firstName = name.substr(1, x - 1);
-        lastName = name.substr(x + 1);
-
+        // Open the csv and print the string to it
         ofstream database;
-        database.open("names.csv");
-
-        database << firstName << "," << lastName << endl;
+        database.open("database.csv", fstream::out | fstream::app);
+        database << input << endl;
 
         return 0;
 }
