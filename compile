@@ -1,0 +1,1 @@
+x86_64-w64-mingw32-g++ -static -static-libstdc++ -static-libgcc dummy.cpp -o dummy.exe
